@@ -5,9 +5,9 @@
 
 int main(void)
 {
-    float a, b, c;
-    float d;
-    float root1, root2;
+    float a = 0, b = 0, c = 0;
+    float d = 0;
+    float root1 = 0, root2 = 0;
 
     printf("Программа решает квадратные уравнения\n");
     printf("Введите коэффиценты:");
