@@ -14,12 +14,12 @@ main()
 
     if(discriminant < 0)
     {
-        printf("корней нет\n");
+        printf("there are no roots\n");
     }
     else
     {
         first_root =  ((- second_coef) + sqrtf(discriminant)) / (2 * first_coef);
         second_root = ((- second_coef) - sqrtf(discriminant)) / (2 * first_coef);
-        printf("первый корень: %f\nвторой корень: %f\n", first_root, second_root);
+        printf("the first root: %f\nthe second root: %f\n", first_root, second_root);
     }
 }
