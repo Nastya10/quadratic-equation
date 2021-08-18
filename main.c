@@ -4,9 +4,9 @@
 
 int main(void)
 {
-    float a, b, c;
-    float discriminant;
-    float first_root, second_root;
+    float a = 0, b = 0, c = 0;
+    float discriminant = 0;
+    float first_root = 0, second_root = 0;
 
     scanf("%f %f %f", &a, &b, &c);
 
