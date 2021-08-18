@@ -1,33 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "TXLib.h"
 
 int main(void)
 {
-    float a = 0, b = 0, c = 0;
-    float discriminant = 0;
-    float first_root = 0, second_root = 0;
+    float a, b, c;
+    float d;
+    float root1, root2;
 
+    printf("Программа решает квадратные уравнения\n");
+    printf("Введите коэффиценты:");
     scanf("%f %f %f", &a, &b, &c);
 
-    discriminant =  pow(b, 2) - 4 * a * c;
+    d =  pow(b, 2) - 4 * a * c;
 
-    if(discriminant < 0)
+    if(d < 0)
     {
-        printf("there are no roots\n");
+        printf("Квадратное уравнение не имеет корней\n");
     }
     else
     {
-        first_root =  ((- b) + sqrtf(discriminant)) / (2 * a);
-        second_root = ((- b) - sqrtf(discriminant)) / (2 * a);
-        
-        if(first_root == second_root)
+        root1 =  ((- b) + sqrtf(d)) / (2 * a);
+        root2 = ((- b) - sqrtf(d)) / (2 * a);
+        if(root1 == root2)
         {
-            printf("one root: %f\n", first_root);
+            printf("У квадратного уравнения есть один корень: %f\n", root1);
         }
         else
         {
-            printf("the first root: %f\nthe second root: %f\n", first_root, second_root);
+            printf("У квадратного уравнения есть два корня\nПервый: %f\nВторой: %f\n", root1, root2);
         }
     }
 
