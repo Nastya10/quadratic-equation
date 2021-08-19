@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <assert.h>
 #include "TXLib.h"
 
 int solve_square(float a, float b, float c, float* root1, float* root2);
@@ -47,6 +48,14 @@ int main(void)
 
 int solve_square(float a, float b, float c, float* root1, float* root2)
 {
+    assert(isfinite(a));
+    assert(isfinite(b));
+    assert(isfinite(c));
+
+    assert(root1 != NULL);
+    assert(root2 != NULL);
+    assert(root1 != root2);
+
     if(a == 0)
     {
         int n_roots = solve_linear(b, c, root1);
@@ -81,6 +90,11 @@ int solve_square(float a, float b, float c, float* root1, float* root2)
 
 int solve_linear(float b, float c, float* root)
 {
+    assert(isfinite(b));
+    assert(isfinite(c));
+
+    assert(root != NULL);
+
     if(b == 0)
     {
         if(c == 0)
@@ -99,4 +113,3 @@ int solve_linear(float b, float c, float* root)
         return 1;
     }
 }
-
