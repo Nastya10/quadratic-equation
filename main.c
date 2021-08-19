@@ -11,7 +11,6 @@ const int INFINITY_SOLUTIONS = 3;
 int main(void)
 {
     float a = 0, b = 0, c = 0;
-    float d = 0;
     float root1 = 0, root2 = 0;
 
     printf("The program solves quadratic equations\n");
@@ -19,7 +18,20 @@ int main(void)
     scanf("%f %f %f", &a, &b, &c);
 
     int n_roots = solution_square(a, b, c, &root1, &root2);
-    printf("%d, %f", n_roots, root1);
+    switch(n_roots)
+    {
+        case 0:                  printf("The quadratic equation has no roots\n");
+                                 break;
+        case 1:                  printf("The quadratic equation has one root: %f\n", root1);
+                                 break;
+        case 2:                  printf("The quadratic equation has two roots\nFirst: %f\nSecond: %f\n", root1, root2);
+                                 break;
+        case INFINITY_SOLUTIONS: printf("The equation has an infinite number of solutions");
+                                 break;
+        default:                 printf("ERROR");
+                                 break;
+
+    }
 
     return EXIT_SUCCESS;
 }
@@ -30,7 +42,7 @@ int solution_square(float a, float b, float c, float* root1, float* root2)
 
     if(a == 0)
     {
-        return solution_linear(b, c, *root1);
+        return solution_linear(b, c, root1);
     }
     else
     {
