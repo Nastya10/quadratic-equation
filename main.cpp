@@ -1,3 +1,4 @@
+#define NDEBUG
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -6,6 +7,7 @@
 
 int solve_square(float a, float b, float c, float* root1, float* root2);
 int solve_linear(float coef1, float coef2, float* root);
+bool equality_fractions(float num1, float num2);
 
 const int INF_SOLUTIONS = 3;
 
@@ -22,6 +24,8 @@ int main(void)
         printf("INPUT ERROR: incorrect number of values\n");
         return EXIT_SUCCESS;
     }
+
+    printf("%d\n", equality_fractions(0.0006, 0.0001));
 
     int n_roots = solve_square(a, b, c, &root1, &root2);
     switch(n_roots)
@@ -112,4 +116,10 @@ int solve_linear(float b, float c, float* root)
         *root = -c / b;
         return 1;
     }
+}
+
+bool equality_fractions(float num1, float num2)
+{
+        float epsilon = pow(10, -7);
+        return abs(abs(num1) - abs(num2)) <= epsilon;
 }
