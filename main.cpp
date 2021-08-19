@@ -19,7 +19,7 @@ int main(void)
     if(scanf("%f %f %f", &a, &b, &c) != 3)
     {
         printf("INPUT ERROR: incorrect number of values\n");
-        return EXIT_FAILURE;
+        return EXIT_SUCCESS;
     }
 
     int n_roots = solve_square(a, b, c, &root1, &root2);
@@ -38,7 +38,7 @@ int main(void)
             printf("The equation has an infinite number of solutions\n");
             break;
         default:
-            printf("INTERNAL ERROR: solve_square returned a strange number of roots: %lg\n", n_roots);
+            printf("INTERNAL ERROR: solve_square returned a unexpected number of roots: %lg\n", n_roots);
             return EXIT_FAILURE;
     }
 
@@ -99,3 +99,4 @@ int solve_linear(float b, float c, float* root)
         return 1;
     }
 }
+
