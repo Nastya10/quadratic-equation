@@ -121,5 +121,5 @@ int solve_linear(float b, float c, float* root)
 bool equality_fractions(float num1, float num2)
 {
         float epsilon = pow(10, -7);
-        return abs(abs(num1) - abs(num2)) <= epsilon;
+        return fabs(fabs(num1) - fabs(num2)) <= epsilon;
 }
