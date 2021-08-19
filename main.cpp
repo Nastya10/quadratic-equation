@@ -3,8 +3,8 @@
 #include <math.h>
 #include "TXLib.h"
 
-int solve_linear(float coef1, float coef2, float* root);
 int solve_square(float a, float b, float c, float* root1, float* root2);
+int solve_linear(float coef1, float coef2, float* root);
 
 const int INF_SOLUTIONS = 3;
 
@@ -18,7 +18,7 @@ int main(void)
 
     if(scanf("%f %f %f", &a, &b, &c) != 3)
     {
-        printf("ERROR: Incorrect number of numbers entered\n");
+        printf("INPUT ERROR: incorrect number of values\n");
         return EXIT_FAILURE;
     }
 
@@ -29,18 +29,17 @@ int main(void)
             printf("The quadratic equation has no roots\n");
             break;
         case 1:
-            printf("The quadratic equation has one root: %f\n", root1);
+            printf("The quadratic equation has one root: %lg\n", root1);
             break;
         case 2:
-            printf("The quadratic equation has two roots\nFirst: %f\nSecond: %f\n", root1, root2);
+            printf("The quadratic equation has two roots\nFirst: %lg\nSecond: %lg\n", root1, root2);
             break;
         case INF_SOLUTIONS:
             printf("The equation has an infinite number of solutions\n");
             break;
         default:
-            printf("ERROR; solve_square returned a strange number of roots: %d\n", n_roots);
+            printf("INTERNAL ERROR: solve_square returned a strange number of roots: %lg\n", n_roots);
             return EXIT_FAILURE;
-
     }
 
     return EXIT_SUCCESS;
@@ -48,9 +47,6 @@ int main(void)
 
 int solve_square(float a, float b, float c, float* root1, float* root2)
 {
-    float d = 0;
-    float parab_vert = 0;
-
     if(a == 0)
     {
         int n_roots = solve_linear(b, c, root1);
@@ -60,19 +56,19 @@ int solve_square(float a, float b, float c, float* root1, float* root2)
     }
     else
     {
-        d =  pow(b, 2) - 4 * a * c;
-        parab_vert = -b / (2 * a);
+        float d =  pow(b, 2) - 4 * a * c;
+        float parab_vert = -b / (2 * a);
 
         if(d < 0)
         {
             return 0;
         }
-        if(d == 0)
+        else if(d == 0)
         {
             *root1 = *root2 = parab_vert;
             return 1;
         }
-        if(d > 0)
+        else
         {
             float d_sqrt = sqrt(d);
 
