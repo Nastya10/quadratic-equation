@@ -25,8 +25,6 @@ int main(void)
         return EXIT_SUCCESS;
     }
 
-    printf("%d\n", equality_fractions(0.0006, 0.0001));
-
     int n_roots = solve_square(a, b, c, &root1, &root2);
     switch(n_roots)
     {
@@ -60,7 +58,7 @@ int solve_square(float a, float b, float c, float* root1, float* root2)
     assert(root2 != NULL);
     assert(root1 != root2);
 
-    if(a == 0)
+    if(equality_fractions(a, 0))
     {
         int n_roots = solve_linear(b, c, root1);
         if(n_roots == 1)
@@ -76,7 +74,7 @@ int solve_square(float a, float b, float c, float* root1, float* root2)
         {
             return 0;
         }
-        else if(d == 0)
+        else if(equality_fractions(d, 0))
         {
             *root1 = *root2 = parab_vert;
             return 1;
@@ -99,9 +97,9 @@ int solve_linear(float b, float c, float* root)
 
     assert(root != NULL);
 
-    if(b == 0)
+    if(equality_fractions(b, 0))
     {
-        if(c == 0)
+        if(equality_fractions(c, 0))
         {
             return INF_SOLUTIONS;
         }
@@ -121,5 +119,5 @@ int solve_linear(float b, float c, float* root)
 bool equality_fractions(float num1, float num2)
 {
         float epsilon = pow(10, -7);
-        return fabs(fabs(num1) - fabs(num2)) <= epsilon;
+        return fabsf(fabsf(num1) - fabsf(num2)) <= epsilon;
 }
