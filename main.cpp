@@ -50,6 +50,22 @@ int main(void)
     return EXIT_SUCCESS;
 }
 
+/*
+ * Solves a square equation ax^2 + bx + c = 0
+ *
+ * @param [in]  a   a - coefficient
+ * @param [in]  b   b - coefficient
+ * @param [in]  c   c - coefficient
+ * @param [out]  root1   root1 - pointer to the first root
+ * @param [out]  root2   root2 - pointer to the second root
+ *
+ * @return Number of roots
+ *
+ * @note In the case of an infinite number of roots returns INF_SOLUTIONS
+ * @note Use functions solve_linear and floats_are_equal
+ *
+ */
+
 int solve_square(float a, float b, float c, float* root1, float* root2)
 {
     assert(isfinite(a));
@@ -92,6 +108,20 @@ int solve_square(float a, float b, float c, float* root1, float* root2)
     }
 }
 
+/*
+ * Solves a square equation bx + c = 0
+ *
+ * @param [in]  b   b - coefficient
+ * @param [in]  c   c - coefficient
+ * @param [out]  root   root - pointer to the root
+ *
+ * @return Number of roots
+ *
+ * @note In the case of an infinite number of roots returns INF_SOLUTIONS
+ * @note Use function floats_are_equal
+ *
+ */
+
 int solve_linear(float b, float c, float* root)
 {
     assert(isfinite(b));
@@ -117,6 +147,19 @@ int solve_linear(float b, float c, float* root)
         return 1;
     }
 }
+
+/*
+ * Checks the equality of two float numbers
+ *
+ * @param [in]  num1   num1 - the first float number
+ * @param [in]  num2   num2 - the second float number
+ *
+ * @return Is it true that the numbers are equal
+ *
+ * @note Epsilon is a constant that determines the maximum
+ *       difference between the modules of numbers
+ *
+ */
 
 bool floats_are_equal(float num1, float num2)
 {
