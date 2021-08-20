@@ -18,7 +18,7 @@ const int INF_ROOTS = 3;
 
 /**
  * Epsilon is a constant that determines the maximum
- * difference between the modules of numbers
+ * difference between two floats to consider them equal
  */
 const float EPSILON = 10E-8;
 
