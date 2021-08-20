@@ -1,3 +1,9 @@
+/*
+ * @file main.cpp
+ * @brief Solving Quadratic Equations
+ * @date не знаю когда это закончится :D
+ */
+
 #define NDEBUG
 
 #include <assert.h>
@@ -5,13 +11,67 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+ * @note Denotes an infinite number of roots
+ */
+const int INF_ROOTS = 3;
+
+/*
+ * @note Epsilon is a constant that determines the maximum
+ *       difference between the modules of numbers
+ */
+const float EPSILON = pow(10, -7);
+
+/*
+ * Solves a square equation ax^2 + bx + c = 0
+ *
+ * @param [in]  a   a - quadratic coefficient
+ * @param [in]  b   b - linear coefficient
+ * @param [in]  c   c - free member
+ * @param [out]  root1
+ * @param [out]  root2
+ *
+ * @return Number of roots
+ *
+ * @retval 0
+ * @retval 1
+ * @retval 2
+ * @retval INF_ROOTS
+ *
+ * @note In the case of an infinite number of roots returns INF_ROOTS
+ *
+ */
 int solve_square(float a, float b, float c, float* root1, float* root2);
+/*
+ * Solves a square equation bx + c = 0
+ *
+ * @param [in]  b   b - coefficient
+ * @param [in]  c   c - coefficient
+ * @param [out]  root
+ *
+ * @return Number of roots
+ *
+ * @retval 0
+ * @retval 1
+ * @retval INF_ROOTS
+ *
+ * @note In the case of an infinite number of roots returns INF_ROOTS
+ *
+ */
 int solve_linear(float coef1, float coef2, float* root);
 
+/*
+ * Checks the equality of two floats
+ *
+ * @param [in]  num1
+ * @param [in]  num2
+ *
+ * @retval TRUE
+ * @retval FALSE
+ *
+ * @return Is it true that the numbers are equal
+ */
 bool floats_are_equal(float num1, float num2);
-
-const int INF_SOLUTIONS = 3;
-const float EPSILON = pow(10, -7);
 
 int main(void)
 {
@@ -39,7 +99,7 @@ int main(void)
         case 2:
             printf("The quadratic equation has two roots\nFirst: %lg\nSecond: %lg\n", root1, root2);
             break;
-        case INF_SOLUTIONS:
+        case INF_ROOTS:
             printf("The equation has an infinite number of solutions\n");
             break;
         default:
@@ -49,22 +109,6 @@ int main(void)
 
     return EXIT_SUCCESS;
 }
-
-/*
- * Solves a square equation ax^2 + bx + c = 0
- *
- * @param [in]  a   a - coefficient
- * @param [in]  b   b - coefficient
- * @param [in]  c   c - coefficient
- * @param [out]  root1   root1 - pointer to the first root
- * @param [out]  root2   root2 - pointer to the second root
- *
- * @return Number of roots
- *
- * @note In the case of an infinite number of roots returns INF_SOLUTIONS
- * @note Use functions solve_linear and floats_are_equal
- *
- */
 
 int solve_square(float a, float b, float c, float* root1, float* root2)
 {
@@ -108,20 +152,6 @@ int solve_square(float a, float b, float c, float* root1, float* root2)
     }
 }
 
-/*
- * Solves a square equation bx + c = 0
- *
- * @param [in]  b   b - coefficient
- * @param [in]  c   c - coefficient
- * @param [out]  root   root - pointer to the root
- *
- * @return Number of roots
- *
- * @note In the case of an infinite number of roots returns INF_SOLUTIONS
- * @note Use function floats_are_equal
- *
- */
-
 int solve_linear(float b, float c, float* root)
 {
     assert(isfinite(b));
@@ -133,7 +163,7 @@ int solve_linear(float b, float c, float* root)
     {
         if(floats_are_equal(c, 0))
         {
-            return INF_SOLUTIONS;
+            return INF_ROOTS;
         }
         else
         {
@@ -148,20 +178,7 @@ int solve_linear(float b, float c, float* root)
     }
 }
 
-/*
- * Checks the equality of two float numbers
- *
- * @param [in]  num1   num1 - the first float number
- * @param [in]  num2   num2 - the second float number
- *
- * @return Is it true that the numbers are equal
- *
- * @note Epsilon is a constant that determines the maximum
- *       difference between the modules of numbers
- *
- */
-
 bool floats_are_equal(float num1, float num2)
 {
-        return fabsf(fabsf(num1) - fabsf(num2)) <= EPSILON;
+        return fabsf(num1 - num2) <= EPSILON;
 }
