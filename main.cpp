@@ -91,16 +91,16 @@ int main(void)
             printf("The quadratic equation has no roots\n");
             break;
         case 1:
-            printf("The quadratic equation has one root: %lg\n", root1);
+            printf("The quadratic equation has one root: %g\n", root1);
             break;
         case 2:
-            printf("The quadratic equation has two roots\nFirst: %lg\nSecond: %lg\n", root1, root2);
+            printf("The quadratic equation has two roots\nFirst: %g\nSecond: %g\n", root1, root2);
             break;
         case INF_ROOTS:
             printf("The equation has an infinite number of solutions\n");
             break;
         default:
-            printf("INTERNAL ERROR: solve_square returned a unexpected number of roots: %lg\n", n_roots);
+            printf("INTERNAL ERROR: solve_square returned a unexpected number of roots: %g\n", n_roots);
             return EXIT_FAILURE;
     }
 
@@ -179,4 +179,3 @@ bool floats_are_equal(float num1, float num2)
 {
         return fabsf(num1 - num2) <= EPSILON;
 }
-
