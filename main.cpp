@@ -12,12 +12,12 @@
 #include <stdlib.h>
 
 /**
- * @brief Denotes an infinite number of roots
+ * Denotes an infinite number of roots
  */
 const int INF_ROOTS = 3;
 
 /**
- * @brief Epsilon is a constant that determines the maximum
+ * Epsilon is a constant that determines the maximum
  *       difference between the modules of numbers
  */
 const float EPSILON = 10E-8;
@@ -25,9 +25,9 @@ const float EPSILON = 10E-8;
 /**
  * Solves a square equation ax^2 + bx + c = 0
  *
- * @param[in]  a   a - quadratic coefficient
- * @param[in]  b   b - linear coefficient
- * @param[in]  c   c - free member
+ * @param[in]  a-quadratic coefficient
+ * @param[in]  b-linear coefficient
+ * @param[in]  c-free member
  * @param[out]  root1
  * @param[out]  root2
  *
@@ -36,17 +36,14 @@ const float EPSILON = 10E-8;
  * @retval 0
  * @retval 1
  * @retval 2
- * @retval INF_ROOTS
- *
- * @note In the case of an infinite number of roots returns INF_ROOTS
- *
+ * @retval INF_ROOTS returns for an infinite number of roots
  */
 int solve_square(float a, float b, float c, float* root1, float* root2);
 /**
  * Solves a square equation bx + c = 0
  *
- * @param[in]  b   b - coefficient
- * @param[in]  c   c - coefficient
+ * @param[in]  b-coefficient
+ * @param[in]  c-coefficient
  * @param[out]  root
  *
  * @return Number of roots
@@ -56,7 +53,6 @@ int solve_square(float a, float b, float c, float* root1, float* root2);
  * @retval INF_ROOTS
  *
  * @note In the case of an infinite number of roots returns INF_ROOTS
- *
  */
 int solve_linear(float coef1, float coef2, float* root);
 
