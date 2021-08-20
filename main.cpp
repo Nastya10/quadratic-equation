@@ -18,16 +18,16 @@ const int INF_ROOTS = 3;
 
 /**
  * Epsilon is a constant that determines the maximum
- *       difference between the modules of numbers
+ * difference between the modules of numbers
  */
 const float EPSILON = 10E-8;
 
 /**
  * Solves a square equation ax^2 + bx + c = 0
  *
- * @param[in]  a quadratic coefficient
- * @param[in]  b linear coefficient
- * @param[in]  c free member
+ * @param[in]   a quadratic coefficient
+ * @param[in]   b linear coefficient
+ * @param[in]   c free member
  * @param[out]  root1
  * @param[out]  root2
  *
@@ -36,7 +36,7 @@ const float EPSILON = 10E-8;
  * @retval 0
  * @retval 1
  * @retval 2
- * @retval INF_ROOTS returns for an infinite number of roots
+ * @retval INF_ROOTS in case of infinite number of roots
  */
 int solve_square(float a, float b, float c, float* root1, float* root2);
 /**
@@ -50,19 +50,19 @@ int solve_square(float a, float b, float c, float* root1, float* root2);
  *
  * @retval 0
  * @retval 1
- * @retval INF_ROOTS returns for an infinite number of roots
+ * @retval INF_ROOTS in case of infinite number of roots
  */
 int solve_linear(float coef1, float coef2, float* root);
 
 /**
  * Checks the equality of two floats
  *
- * @param[in]  num1
- * @param[in]  num2
+ * @param[in]  float1
+ * @param[in]  float2
  *
  * @return Is it true that the numbers are equal
  */
-bool floats_are_equal(float num1, float num2);
+bool floats_are_equal(float float1, float float2);
 
 int main(void)
 {
@@ -169,7 +169,7 @@ int solve_linear(float b, float c, float* root)
     }
 }
 
-bool floats_are_equal(float num1, float num2)
+bool floats_are_equal(float float1, float float2)
 {
-        return fabsf(num1 - num2) <= EPSILON;
+        return fabsf(float1 - float2) <= EPSILON;
 }
