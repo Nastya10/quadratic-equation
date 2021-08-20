@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include "various_functions.h"
 
+int INF_ROOTS = 3;
+float EPSILON = 10E-8;
+
 int solve_square(float a, float b, float c, float* root1, float* root2)
 {
     assert(isfinite(a));
