@@ -4,13 +4,13 @@
 /**
  * Denotes an infinite number of roots
  */
-extern int INF_ROOTS;
+extern const int INF_ROOTS;
 
 /**
  * Epsilon is a constant that determines the maximum
  * difference between two floats to consider them equal
  */
-extern float EPSILON;
+extern const float EPSILON;
 
 /**
  * Solves a square equation ax^2 + bx + c = 0

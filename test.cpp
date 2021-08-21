@@ -52,6 +52,6 @@ void test_solve_square_roots(float a, float b, float c, float root1_expected, fl
 
     if(root1_observed != root1_expected && root2_observed != root2_expected)
     {
-        printf("ERROR when entering a = %g; b = %g; c = %g\n", a, b, c);
+        printf("ERROR: when entering a = %g; b = %g; c = %g\n", a, b, c);
     }
 }
