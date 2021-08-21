@@ -29,8 +29,8 @@ int main(void)
     #else
         float a = 0, b = 0, c = 0;
         float root1 = 0, root2 = 0;
-        printf("The program solves quadratic equations\n");
-        printf("Enter the coefficients a, b and c:");
+        printf("The program solves quadratic equations\n"
+               "Enter the coefficients a, b and c:");
         if(scanf("%f %f %f", &a, &b, &c) != 3)
         {
             printf("INPUT ERROR: incorrect number of values\n");
