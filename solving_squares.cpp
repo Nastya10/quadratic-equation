@@ -7,8 +7,8 @@
 #include "test.h"
 #include "solving_squares.h"
 
-extern const int INF_ROOTS = 3;
-extern const float EPSILON = 10E-8;
+const int INF_ROOTS = 3;
+const float EPSILON = 10E-8;
 
 int solve_square(float a, float b, float c, float* root1, float* root2)
 {
