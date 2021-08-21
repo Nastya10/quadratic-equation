@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "functions_fo_floats.h"
+#include "floats.h"
 #include "test.h"
-#include "solving_squares.h"
+#include "solving_equations.h"
 
 int solve_square(float a, float b, float c, float* root1, float* root2)
 {

@@ -2,8 +2,8 @@
 #include <math.h>
 #include <stdio.h>
 
-#include "functions_fo_floats.h"
-#include "solving_squares.h"
+#include "floats.h"
+#include "solving_equations.h"
 
 /**
  * Epsilon is a constant that determines the maximum

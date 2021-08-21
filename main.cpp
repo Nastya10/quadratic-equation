@@ -11,9 +11,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "functions_fo_floats.h"
+#include "floats.h"
 #include "test.h"
-#include "solving_squares.h"
+#include "solving_equations.h"
 
 
 //#define TEST
