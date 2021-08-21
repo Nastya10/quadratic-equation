@@ -15,6 +15,7 @@
 #include "test.h"
 #include "solving_squares.h"
 
+
 //#define TEST
 
 int main(void)

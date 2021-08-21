@@ -2,6 +2,12 @@
 #define FUNCTIONS_FO_FLOATS_H_INCLUDED
 
 /**
+ * Epsilon is a constant that determines the maximum
+ * difference between two floats to consider them equal
+ */
+const float EPSILON = 10E-8;
+
+/**
  * Checks the equality of two floats
  *
  * @param[in] float1
