@@ -1,0 +1,85 @@
+/**
+ * @file solver.cpp
+ * @brief Functions of solutions of quadratic and linear equations
+ * @date i don’t know when this is gonna end :D
+ */
+
+#include <assert.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "floats.h"
+#include "solver.h"
+
+int solve_square(float a, float b, float c, float *root1, float *root2)
+{
+    assert(isfinite(a));
+    assert(isfinite(b));
+    assert(isfinite(c));
+
+    assert(root1 != NULL);
+    assert(root2 != NULL);
+    assert(root1 != root2);
+
+    if (floats_are_equal(a, 0))
+    {
+        int n_roots = solve_linear(b, c, root1);
+        if (n_roots == 1)
+            *root2 = *root1;
+        return n_roots;
+    }
+    else
+    {
+        float d =  discriminant(a, b, c);
+        float parab_vert = -b / (2 * a);
+
+        if (d < 0)
+        {
+            return 0;
+        }
+        else if (floats_are_equal(d, 0))
+        {
+            *root1 = *root2 = parab_vert;
+            return 1;
+        }
+        else
+        {
+            float d_sqrt = sqrt(d);
+
+            *root1 = parab_vert + d_sqrt / (2 * a);
+            *root2 = parab_vert - d_sqrt / (2 * a);
+            return 2;
+        }
+    }
+}
+
+int solve_linear(float b, float c, float *root)
+{
+    assert(isfinite(b));
+    assert(isfinite(c));
+
+    assert(root != NULL);
+
+    if (floats_are_equal(b, 0))
+    {
+        if (floats_are_equal(c, 0))
+        {
+            return INF_ROOTS;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    else
+    {
+        *root = -c / b;
+        return 1;
+    }
+}
+
+static float discriminant(float a, float b, float c)
+{
+    return b * b - 4 * a * c;
+}

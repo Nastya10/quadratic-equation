@@ -1,3 +1,9 @@
+/**
+ * @file main.cpp
+ * @brief Tests that verify functions for solutions of quadratic and linear equations
+ * @date i don’t know when this is gonna end :D
+ */
+
 #include <assert.h>
 #include <math.h>
 #include <stdio.h>
@@ -5,7 +11,7 @@
 
 #include "floats.h"
 #include "test.h"
-#include "solving_equations.h"
+#include "solver.h"
 
 int test_solve_square(void)
 {
@@ -42,7 +48,7 @@ int test_solve_square_roots_quantity(float a, float b, float c, int correct_n_ro
     float unused1 = 0, unused2 = 0;
 
     int n_observed_roots = solve_square(a, b, c, &unused1, &unused2);
-    if(n_observed_roots != correct_n_roots)
+    if (n_observed_roots != correct_n_roots)
     {
         printf("TEST FAILED: with parameters a = %g, b = %g, c = %g\n"
                "Expected number of roots: %g\n"
@@ -65,7 +71,7 @@ int test_solve_square_roots(float a, float b, float c, float root1_expected, flo
 
     solve_square(a, b, c, &root1_observed, &root2_observed);
 
-    if(root1_observed != root1_expected && root2_observed != root2_expected)
+    if (root1_observed != root1_expected && root2_observed != root2_expected)
     {
         printf("TEST FAILED: with parameters a = %g, b = %g, c = %g\n"
                "Roots expected: root1 = %g, root2 = %g\n"
@@ -102,7 +108,7 @@ int test_solve_linear_roots_quantity(float b, float c, int correct_n_roots)
     float unused = 0;
 
     int n_observed_roots = solve_linear(b, c, &unused);
-    if(n_observed_roots != correct_n_roots)
+    if (n_observed_roots != correct_n_roots)
     {
         printf("TEST FAILED: with parameters b = %g, c = %g\n"
                "Expected number of roots: %g\n"
@@ -123,7 +129,7 @@ int test_solve_linear_root(float b, float c, float root_expected)
 
     solve_linear(b, c, &root_observed);
 
-    if(root_observed != root_expected)
+    if (root_observed != root_expected)
     {
         printf("TEST FAILED: with parameters b = %g, c = %g\n"
                "Root expected: root = %g\n"
