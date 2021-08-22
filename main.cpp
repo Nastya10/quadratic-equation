@@ -21,11 +21,19 @@
 int main(void)
 {
     #if defined TEST
-        int n_failed_tests = test_solve_square();
-        if(n_failed_tests != 0)
-            printf("TESTS FAILED: number of failed tests: %d\n", n_failed_tests);
+        int n_failed_tests_square = test_solve_square();
+        if(n_failed_tests_square != 0)
+            printf("TESTS FAILED (function solve_square): "
+                   "number of failed tests: %d\n", n_failed_tests_square);
         else
-            printf("TESTS PASSED\n");
+            printf("TESTS PASSED (function solve_square)\n");
+
+        int n_failed_tests_square_linear = test_solve_linear();
+        if(n_failed_tests_square_linear != 0)
+            printf("TESTS FAILED (function solve_linear): "
+                   "number of failed tests: %d\n", n_failed_tests_square_linear);
+        else
+            printf("TESTS PASSED (function solve_linear)\n");
     #else
 
         float a = 0, b = 0, c = 0;
