@@ -15,9 +15,10 @@ bool floats_are_equal(float float1, float float2)
         return fabsf(float1 - float2) <= FLT_EPSILON;
 }
 
-bool float_is_less(float float_num, int int_num)
+bool float_is_less(float float_min, float float_max)
 {
-    assert(isfinite(float_num));
+    assert(isfinite(float_min));
+    assert(isfinite(float_max));
 
-    return int_num - float_num > FLT_EPSILON;
+    return float_max - float_min > FLT_EPSILON;
 }

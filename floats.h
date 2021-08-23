@@ -18,13 +18,13 @@
 bool floats_are_equal(float float1, float float2);
 
 /**
- * Checks float is less int
+ * Checks which float is less
  *
- * @param[in] float_num
- * @param[in] int_num
+ * @param[in] float_min
+ * @param[in] float_max
  *
- * @return Is it true that the floats are equal
+ * @return Is it true that the first floats is less
  */
-bool float_is_less(float float_num, int int_num);
+bool float_is_less(float float_min, float float_max);
 
 #endif // FUNCTIONS_FO_FLOATS_H_INCLUDED
