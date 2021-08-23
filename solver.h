@@ -4,8 +4,8 @@
  * @date i don’t know when this is gonna end :D
  */
 
-#ifndef SOLVING_SQUARES_H_INCLUDED
-#define SOLVING_SQUARES_H_INCLUDED
+#ifndef SOLVER_H_INCLUDED
+#define SOLVER_H_INCLUDED
 
 /**
  * Denotes an infinite number of roots

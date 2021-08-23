@@ -30,7 +30,7 @@ int solve_square(float a, float b, float c, float *root1, float *root2)
         float d =  discriminant(a, b, c);
         float parab_vert = -b / (2 * a);
 
-        if (d < 0)
+        if (float_is_less(d, 0))
         {
             return 0;
         }

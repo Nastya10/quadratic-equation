@@ -19,7 +19,7 @@
 #include "solver.h"
 
 
-//#define TEST
+#define TEST
 
 int main(void)
 {
