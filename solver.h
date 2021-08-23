@@ -1,3 +1,9 @@
+/**
+ * @file solver.cpp
+ * @brief Functions of solutions of quadratic and linear equations
+ * @date i don’t know when this is gonna end :D
+ */
+
 #ifndef SOLVING_SQUARES_H_INCLUDED
 #define SOLVING_SQUARES_H_INCLUDED
 
@@ -38,7 +44,5 @@ int solve_square(float a, float b, float c, float *root1, float *root2);
  * @retval INF_ROOTS in case of infinite number of roots
  */
 int solve_linear(float float1, float float2, float *root);
-
-static float discriminant(float a, float b, float c);
 
 #endif // SOLVING_SQUARES_H_INCLUDED

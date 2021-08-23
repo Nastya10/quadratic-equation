@@ -1,9 +1,3 @@
-/**
- * @file main.cpp
- * @brief Tests that verify functions for solutions of quadratic and linear equations
- * @date i don’t know when this is gonna end :D
- */
-
 #include <assert.h>
 #include <math.h>
 #include <stdio.h>

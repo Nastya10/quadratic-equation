@@ -1,13 +1,7 @@
-/**
- * @file main.cpp
- * @brief Function for checking the equality of two floats
- * @date i don’t know when this is gonna end :D
- */
-
 #include <assert.h>
+#include <float.h>
 #include <math.h>
 #include <stdio.h>
-#include <float.h>
 
 #include "floats.h"
 

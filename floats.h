@@ -1,3 +1,9 @@
+/**
+ * @file main.cpp
+ * @brief Function for checking the equality of two floats
+ * @date i don’t know when this is gonna end :D
+ */
+
 #ifndef FUNCTIONS_FO_FLOATS_H_INCLUDED
 #define FUNCTIONS_FO_FLOATS_H_INCLUDED
 
