@@ -17,5 +17,7 @@ bool floats_are_equal(float float1, float float2)
 
 bool float_is_less(float float_num, int int_num)
 {
+    assert(isfinite(float_num));
+
     return int_num - float_num > FLT_EPSILON;
 }
