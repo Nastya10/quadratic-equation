@@ -1,7 +1,7 @@
 /**
  * @file solver.cpp
  * @brief Functions of solutions of quadratic and linear equations
- * @date i don’t know when this is gonna end :D
+ * @date i donâ€™t know when this is gonna end :D
  */
 
 #ifndef SOLVER_H_INCLUDED
@@ -10,7 +10,6 @@
 /**
  * INF_ROOTS denotes an infinite number of roots
  */
-
 enum Number_of_roots {INF_ROOTS = -1, NO_ROOTS, ONE_ROOT, TWO_ROOTS};
 
 /**
