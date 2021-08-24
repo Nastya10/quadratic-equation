@@ -4,9 +4,9 @@
  * @date i don’t know when this is gonna end :D
  * ---------------------------------------------------------------
  * This file is an application for quadratic square equations if
- * Release mode (with flag TEST)
+ * Release mode (without flag TEST)
  * And this file implements square equation solver unit tests if
- * building in Debug mode (without flag TEST)
+ * building in Debug mode (with flag TEST)
  */
 
 #include <assert.h>
