@@ -32,12 +32,12 @@ int solve_square(float a, float b, float c, float *root1, float *root2)
 
         if (float_is_less(d, 0))
         {
-            return 0;
+            return NO_ROOTS;
         }
         else if (floats_are_equal(d, 0))
         {
             *root1 = *root2 = parab_vert;
-            return 1;
+            return ONE_ROOT;
         }
         else
         {
@@ -45,7 +45,7 @@ int solve_square(float a, float b, float c, float *root1, float *root2)
 
             *root1 = parab_vert + d_sqrt / (2 * a);
             *root2 = parab_vert - d_sqrt / (2 * a);
-            return 2;
+            return TWO_ROOTS;
         }
     }
 }
@@ -65,13 +65,13 @@ int solve_linear(float b, float c, float *root)
         }
         else
         {
-            return 0;
+            return NO_ROOTS;
         }
     }
     else
     {
         *root = -c / b;
-        return 1;
+        return ONE_ROOT;
     }
 }
 

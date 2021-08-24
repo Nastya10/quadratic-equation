@@ -8,9 +8,10 @@
 #define SOLVER_H_INCLUDED
 
 /**
- * Denotes an infinite number of roots
+ * INF_ROOTS denotes an infinite number of roots
  */
-const int INF_ROOTS = -1;
+
+enum Number_of_roots {INF_ROOTS = -1, NO_ROOTS, ONE_ROOT, TWO_ROOTS};
 
 /**
  * Solves a square equation ax^2 + bx + c = 0
