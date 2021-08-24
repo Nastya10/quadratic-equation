@@ -8,7 +8,7 @@
 
 static float discriminant(float a, float b, float c);
 
-enum roots_num solve_square(float a, float b, float c, float *root1, float *root2)
+enum roots_num solve_quadratic(float a, float b, float c, float *root1, float *root2)
 {
     assert(isfinite(a));
     assert(isfinite(b));

@@ -13,7 +13,7 @@
 enum roots_num {INF_ROOTS = -1, NO_ROOTS, ONE_ROOT, TWO_ROOTS};
 
 /**
- * Solves a square equation ax^2 + bx + c = 0
+ * Solves a quadratic equation ax^2 + bx + c = 0
  *
  * @param[in] a quadratic coefficient
  * @param[in] b linear coefficient
@@ -28,10 +28,10 @@ enum roots_num {INF_ROOTS = -1, NO_ROOTS, ONE_ROOT, TWO_ROOTS};
  * @retval 2
  * @retval INF_ROOTS in case of infinite number of roots
  */
-enum roots_num solve_square(float a, float b, float c, float *root1, float *root2);
+enum roots_num solve_quadratic(float a, float b, float c, float *root1, float *root2);
 
 /**
- * Solves a square equation bx + c = 0
+ * Solves a quadratic equation bx + c = 0
  *
  * @param[in] b linear coefficient
  * @param[in] c coefficient

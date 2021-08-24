@@ -3,7 +3,7 @@
  * @brief Solving Quadratic Equations
  * @date i don’t know when this is gonna end :D
  * ---------------------------------------------------------------
- * This file is an application for solving square equations if
+ * This file is an application for quadratic square equations if
  * Release mode (with flag TEST)
  * And this file implements square equation solver unit tests if
  * building in Debug mode (without flag TEST)
@@ -24,12 +24,12 @@
 int main(void)
 {
     #ifdef TEST
-        int n_failed_tests_square = test_solve_square();
-        if (n_failed_tests_square != 0)
-            printf("TESTS FAILED (function solve_square): "
-                   "number of failed tests: %d\n", n_failed_tests_square);
+        int n_failed_tests_quadratic = test_solve_quadratic();
+        if (n_failed_tests_quadratic != 0)
+            printf("TESTS FAILED (function solve_quadratic): "
+                   "number of failed tests: %d\n", n_failed_tests_quadratic);
         else
-            printf("TESTS PASSED (function solve_square)\n");
+            printf("TESTS PASSED (function solve_quadratic)\n");
 
         int n_failed_tests_square_linear = test_solve_linear();
         if (n_failed_tests_square_linear != 0)
@@ -51,7 +51,7 @@ int main(void)
             return EXIT_SUCCESS;
         }
 
-        enum roots_num  n_roots = solve_square(a, b, c, &root1, &root2);
+        enum roots_num  n_roots = solve_quadratic(a, b, c, &root1, &root2);
         switch (n_roots)
         {
             case NO_ROOTS:
@@ -69,7 +69,7 @@ int main(void)
                 printf("The equation has an infinite number of solutions\n");
                 break;
             default:
-                printf("INTERNAL ERROR: solve_square returned a unexpected number of roots: %g\n", n_roots);
+                printf("INTERNAL ERROR: solve_quadratic returned a unexpected number of roots: %g\n", n_roots);
                 return EXIT_FAILURE;
         }
 

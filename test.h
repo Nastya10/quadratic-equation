@@ -9,9 +9,9 @@
 
 #include "solver.h"
 
-int test_solve_square(void);
-int test_solve_square_roots_quantity(float a, float b, float c, enum roots_num correct_n_roots);
-int test_solve_square_roots(float a, float b, float c, float root1_expected, float root2_expected);
+int test_solve_quadratic(void);
+int test_solve_quadratic_roots_quantity(float a, float b, float c, enum roots_num correct_n_roots);
+int test_solve_quadratic_roots(float a, float b, float c, float root1_expected, float root2_expected);
 
 int test_solve_linear(void);
 int test_solve_linear_roots_quantity(float b, float c, enum roots_num correct_n_roots);
