@@ -20,7 +20,7 @@ enum roots_num solve_square(float a, float b, float c, float *root1, float *root
 
     if (floats_are_equal(a, 0))
     {
-        int n_roots = solve_linear(b, c, root1);
+        enum roots_num n_roots = solve_linear(b, c, root1);
         if (n_roots == 1)
             *root2 = *root1;
         return n_roots;
