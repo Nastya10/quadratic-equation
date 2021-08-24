@@ -1,7 +1,7 @@
 /**
  * @file solver.cpp
  * @brief Functions of solutions of quadratic and linear equations
- * @date i don’t know when this is gonna end :D
+ * @date i do not know when this is gonna end :D
  */
 
 #ifndef SOLVER_H_INCLUDED

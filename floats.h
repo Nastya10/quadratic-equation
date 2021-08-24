@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
  * @brief Function for checking the equality of two floats
- * @date i don’t know when this is gonna end :D
+ * @date i do not know when this is gonna end :D
  */
 
 #ifndef FLOATS_H_INCLUDED

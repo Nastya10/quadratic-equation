@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
  * @brief Solving Quadratic Equations
- * @date i don’t know when this is gonna end :D
+ * @date i do not know when this is gonna end :D
  * ---------------------------------------------------------------
  * This file is an application for quadratic square equations if
  * Release mode (without flag TEST)

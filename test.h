@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
  * @brief Tests that verify functions for solutions of quadratic and linear equations
- * @date i don’t know when this is gonna end :D
+ * @date i do not know when this is gonna end :D
  */
 
 #ifndef TEST_H_INCLUDED
