@@ -3,7 +3,7 @@
  * @brief Solving Quadratic Equations
  * @date i don’t know when this is gonna end :D
  * ---------------------------------------------------------------
- * This file is an application for solving quadratic equations if
+ * This file is an application for solving square equations if
  * Release mode (with flag TEST)
  * And this file implements square equation solver unit tests if
  * building in Debug mode (without flag TEST)
