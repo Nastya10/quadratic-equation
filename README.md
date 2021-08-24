@@ -5,7 +5,7 @@ This program takes as input three coefficients of the quadratic equation ax^2 + 
 Program works in testing mode if macro TEST is defined.
 
 ## Documentations
-My [page](https://github.com/Nastya10/quadratic-equation/tree/main/html)
+My [page](http://htmlpreview.github.io/?https://github.com/Nastya10/quadratic-equation/blob/main/html/main_8cpp.html)
 
 ## Usage examples
 Screenshot of the program working when solving a quadratic equation:
