@@ -23,7 +23,7 @@
 
 int main(void)
 {
-    #if defined TEST
+    #ifdef TEST
         int n_failed_tests_square = test_solve_square();
         if (n_failed_tests_square != 0)
             printf("TESTS FAILED (function solve_square): "
@@ -51,16 +51,16 @@ int main(void)
             return EXIT_SUCCESS;
         }
 
-        int n_roots = solve_square(a, b, c, &root1, &root2);
+        enum roots_num  n_roots = solve_square(a, b, c, &root1, &root2);
         switch (n_roots)
         {
-            case 0:
+            case NO_ROOTS:
                 printf("The quadratic equation has no roots\n");
                 break;
-            case 1:
+            case ONE_ROOT:
                 printf("The quadratic equation has one root: %g\n", root1);
                 break;
-            case 2:
+            case TWO_ROOTS:
                 printf("The quadratic equation has two roots\n"
                        "First: %g\n"
                        "Second: %g\n", root1, root2);

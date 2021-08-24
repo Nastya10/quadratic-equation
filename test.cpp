@@ -14,25 +14,25 @@ int test_solve_square(void)
     n_failed_tests_square += test_solve_square_roots_quantity(0, 0, 0, INF_ROOTS);
     n_failed_tests_square += test_solve_square_roots(0, 0, 0, 0, 0);
 
-    n_failed_tests_square += test_solve_square_roots_quantity(0, 0, 5, 0);
+    n_failed_tests_square += test_solve_square_roots_quantity(0, 0, 5, NO_ROOTS);
     n_failed_tests_square += test_solve_square_roots(0, 0, 5, 0, 0);
 
-    n_failed_tests_square += test_solve_square_roots_quantity(2, 4, 3, 0);
+    n_failed_tests_square += test_solve_square_roots_quantity(2, 4, 3, NO_ROOTS);
     n_failed_tests_square += test_solve_square_roots(2, 4, 3, 0, 0);
 
-    n_failed_tests_square += test_solve_square_roots_quantity(0, 3, 15, 1);
+    n_failed_tests_square += test_solve_square_roots_quantity(0, 3, 15, ONE_ROOT);
     n_failed_tests_square += test_solve_square_roots(0, 3, 15, -5, -5);
 
-    n_failed_tests_square += test_solve_square_roots_quantity(1, -4, 4, 1);
+    n_failed_tests_square += test_solve_square_roots_quantity(1, -4, 4, ONE_ROOT);
     n_failed_tests_square += test_solve_square_roots(1, -4, 4, 2, 2);
 
-    n_failed_tests_square += test_solve_square_roots_quantity(1, 2, -15, 2);
+    n_failed_tests_square += test_solve_square_roots_quantity(1, 2, -15, TWO_ROOTS);
     n_failed_tests_square += test_solve_square_roots(1, 2, -15, 3, -5);
 
     return n_failed_tests_square;
 }
 
-int test_solve_square_roots_quantity(float a, float b, float c, int correct_n_roots)
+int test_solve_square_roots_quantity(float a, float b, float c, enum roots_num correct_n_roots)
 {
     assert(isfinite(a));
     assert(isfinite(b));
@@ -41,7 +41,7 @@ int test_solve_square_roots_quantity(float a, float b, float c, int correct_n_ro
 
     float unused1 = 0, unused2 = 0;
 
-    int n_observed_roots = solve_square(a, b, c, &unused1, &unused2);
+    enum roots_num n_observed_roots = solve_square(a, b, c, &unused1, &unused2);
     if (n_observed_roots != correct_n_roots)
     {
         printf("TEST FAILED: with parameters a = %g, b = %g, c = %g\n"
@@ -84,16 +84,16 @@ int test_solve_linear(void)
     n_failed_tests_square_linear += test_solve_linear_roots_quantity(0, 0, INF_ROOTS);
     n_failed_tests_square_linear += test_solve_linear_root(0, 0, 0);
 
-    n_failed_tests_square_linear += test_solve_linear_roots_quantity(0, 5, 0);
+    n_failed_tests_square_linear += test_solve_linear_roots_quantity(0, 5, NO_ROOTS);
     n_failed_tests_square_linear += test_solve_linear_root(0, 5, 0);
 
-    n_failed_tests_square_linear += test_solve_linear_roots_quantity(3, -15, 1);
+    n_failed_tests_square_linear += test_solve_linear_roots_quantity(3, -15, ONE_ROOT);
     n_failed_tests_square_linear += test_solve_linear_root(3, -15, 5);
 
     return n_failed_tests_square_linear;
 }
 
-int test_solve_linear_roots_quantity(float b, float c, int correct_n_roots)
+int test_solve_linear_roots_quantity(float b, float c, enum roots_num correct_n_roots)
 {
     assert(isfinite(b));
     assert(isfinite(c));
@@ -101,7 +101,7 @@ int test_solve_linear_roots_quantity(float b, float c, int correct_n_roots)
 
     float unused = 0;
 
-    int n_observed_roots = solve_linear(b, c, &unused);
+    enum roots_num n_observed_roots = solve_linear(b, c, &unused);
     if (n_observed_roots != correct_n_roots)
     {
         printf("TEST FAILED: with parameters b = %g, c = %g\n"

@@ -8,7 +8,7 @@
 
 static float discriminant(float a, float b, float c);
 
-int solve_square(float a, float b, float c, float *root1, float *root2)
+enum roots_num solve_square(float a, float b, float c, float *root1, float *root2)
 {
     assert(isfinite(a));
     assert(isfinite(b));
@@ -50,7 +50,7 @@ int solve_square(float a, float b, float c, float *root1, float *root2)
     }
 }
 
-int solve_linear(float b, float c, float *root)
+enum roots_num solve_linear(float b, float c, float *root)
 {
     assert(isfinite(b));
     assert(isfinite(c));

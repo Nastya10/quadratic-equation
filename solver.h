@@ -1,7 +1,7 @@
 /**
  * @file solver.cpp
  * @brief Functions of solutions of quadratic and linear equations
- * @date i donâ€™t know when this is gonna end :D
+ * @date i don’t know when this is gonna end :D
  */
 
 #ifndef SOLVER_H_INCLUDED
@@ -10,7 +10,7 @@
 /**
  * INF_ROOTS denotes an infinite number of roots
  */
-enum Number_of_roots {INF_ROOTS = -1, NO_ROOTS, ONE_ROOT, TWO_ROOTS};
+enum roots_num {INF_ROOTS = -1, NO_ROOTS, ONE_ROOT, TWO_ROOTS};
 
 /**
  * Solves a square equation ax^2 + bx + c = 0
@@ -28,7 +28,7 @@ enum Number_of_roots {INF_ROOTS = -1, NO_ROOTS, ONE_ROOT, TWO_ROOTS};
  * @retval 2
  * @retval INF_ROOTS in case of infinite number of roots
  */
-int solve_square(float a, float b, float c, float *root1, float *root2);
+enum roots_num solve_square(float a, float b, float c, float *root1, float *root2);
 
 /**
  * Solves a square equation bx + c = 0
@@ -43,6 +43,6 @@ int solve_square(float a, float b, float c, float *root1, float *root2);
  * @retval 1
  * @retval INF_ROOTS in case of infinite number of roots
  */
-int solve_linear(float float1, float float2, float *root);
+enum roots_num solve_linear(float float1, float float2, float *root);
 
 #endif // SOLVING_SQUARES_H_INCLUDED
