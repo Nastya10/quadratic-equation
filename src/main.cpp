@@ -21,7 +21,7 @@
 #include "test.h"
 #include "solver.h"
 
-#define TEST
+//#define TEST
 
 int main(void)
 {
@@ -30,18 +30,22 @@ int main(void)
 #else
 
     float a = 0, b = 0, c = 0;
-    float root1 = NAN, root2 = NAN;
+    float root1 = 0, root2 = 0;
 
     printf("The program solves quadratic equations\n"
            "Enter the coefficients a, b and c: ");
 
-    input(&a, &b, &c);
+    int status_input = input(&a, &b, &c);
+    if (status_input == EXIT_FAILURE) {
+        return EXIT_FAILURE;
+    }
 
-    if (__isnanf(root1) != 0 || __isnanf(root1) != 0)
-        return EXIT_SUCCESS;
+    enum roots_num n_roots = solve_quadratic(a, b, c, &root1, &root2);
 
-    enum roots_num  n_roots = solve_quadratic(a, b, c, &root1, &root2);
-    print(n_roots, root1, root2);
+    int status_print = print(n_roots, root1, root2);
+    if (status_print == EXIT_FAILURE) {
+        return EXIT_FAILURE;
+    }
 
 #endif
 

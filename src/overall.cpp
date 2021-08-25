@@ -27,11 +27,14 @@ void test(void)
 
 int input(float *a, float *b, float *c)
 {
-    if (scanf("%f %f %f", a, b, c) != 3)
+    int numbersEntered = scanf("%f %f %f", a, b, c);
+    if (numbersEntered != 3)
     {
         printf("INPUT ERROR: incorrect number of values\n");
-        return EXIT_SUCCESS;
+        return EXIT_FAILURE;
     }
+
+    return EXIT_SUCCESS;
 }
 
 int print(enum roots_num  n_roots, const float root1, const float root2)
@@ -67,4 +70,6 @@ int print(enum roots_num  n_roots, const float root1, const float root2)
             );
             return EXIT_FAILURE;
     }
+
+    return EXIT_SUCCESS;
 }
