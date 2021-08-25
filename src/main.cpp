@@ -1,12 +1,12 @@
 /**
  * @file main.cpp
- * @brief Solving Quadratic Equations
- * @date i do not know when this is gonna end :D
+ * @brief Решение квадратных уравнений
+ * @date
  * ---------------------------------------------------------------
- * This file is an application for quadratic square equations if
- * Release mode (without flag TEST)
- * And this file implements square equation solver unit tests if
- * building in Debug mode (with flag TEST)
+ * При запуске программа решает квадратные уравнения
+ * если не используется макрос TEST
+ * И этот файл запускает юнит-тесты
+ * при использования макроса TEST
  */
 
 #include <assert.h>
@@ -35,7 +35,7 @@ int main(void)
 
     input(&a, &b, &c);
 
-    if (__isnanf(root1) != 0 || __isnanf(root2) != 0)
+    if (__isnanf(root1) != 0 || __isnanf(root1) != 0)
         return EXIT_SUCCESS;
 
     enum roots_num  n_roots = solve_quadratic(a, b, c, &root1, &root2);

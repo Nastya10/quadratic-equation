@@ -34,8 +34,9 @@
 		</Compiler>
 		<Unit filename="floats.cpp" />
 		<Unit filename="floats.h" />
-		<Unit filename="functions_fo_floats.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="overall.cpp" />
+		<Unit filename="overall.h" />
 		<Unit filename="solver.cpp" />
 		<Unit filename="solver.h" />
 		<Unit filename="test.cpp" />

@@ -5,9 +5,9 @@
 
 #include "floats.h"
 
-//FLT_EPSILON is about 2^(-23)
+//FLT_EPSILON примерно 2^(-23)
 
-int compare_floats(const float float1, const float float2)
+enum compare_floats_result compare_floats(const float float1, const float float2)
 {
     if (floats_are_equal(float1, float2))
         return EQUAL;

@@ -1,50 +1,50 @@
 /**
  * @file
- * @brief Function for checking the equality of two floats
- * @date i do not know when this is gonna end :D
+ * @brief В этом файле находятся функции для сравнения двух чисел типа float
+ * @date
  */
 
 #ifndef FLOATS_H_INCLUDED
 #define FLOATS_H_INCLUDED
 
 /**
- * This enumeration contains all possible results of
- * two float-point numbers comparison
+ * Здесь перечислены все возможные
+ * результаты при сравнении двух чисел типа float
  */
 enum compare_floats_result {
-    MORE  = 0, /**< denotes that the first float is greater than the second*/
-    LESS  = 1, /**< denotes that the first float is less than the second*/
-    EQUAL = 2  /**< denotes that numbers are equal*/
+    MORE  = 0, /**< Означает, что первое число больше второго*/
+    LESS  = 1, /**< Означает, что первое число меньше второго*/
+    EQUAL = 2  /**< Означает, что два числа равны*/
 };
 
 /**
- * Checks the equality of two floats
+ * Проверяет равны ли два числа
  *
  * @param[in] float1
  * @param[in] float2
  *
- * @return Is it true that the floats are equal
+ * @return Являются ли числа равными
  */
 bool floats_are_equal(const float float1, const float float2);
 
 /**
- * Checks which float is less
+ * Проверяет меньше ли первое передаваемое число
  *
  * @param[in] float_min
  * @param[in] float_max
  *
- * @return First floats is less ore not
+ * @return Является ли первое число меньше
  */
 bool float_is_less(const float float_min, const float float_max);
 
 /**
- * Сomparison floats
+ * Сравнивает два числа
  *
  * @param[in] float_min
  * @param[in] float_max
  *
- * @return Result of comparison
+ * @return Результат сравнения
  */
-int compare_floats(const float float1, const float float2);
+enum compare_floats_result compare_floats(const float float1, const float float2);
 
 #endif // FUNCTIONS_FO_FLOATS_H_INCLUDED

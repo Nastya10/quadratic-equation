@@ -1,7 +1,8 @@
 /**
  * @file
- * @brief Tests that verify functions for solutions of quadratic and linear equations
- * @date i do not know when this is gonna end :D
+ * @brief В этом файле тесты, которые проверяют
+ * функции, решающие квадратные и линейные уравнения
+ * @date
  */
 
 #ifndef TEST_H_INCLUDED

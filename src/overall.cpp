@@ -41,19 +41,30 @@ int print(enum roots_num  n_roots, const float root1, const float root2)
         case NO_ROOTS:
             printf("The quadratic equation has no roots\n");
             break;
+
         case ONE_ROOT:
             printf("The quadratic equation has one root: %g\n", root1);
             break;
+
         case TWO_ROOTS:
-            printf("The quadratic equation has two roots\n"
-                   "First: %g\n"
-                   "Second: %g\n", root1, root2);
+            printf(
+                "The quadratic equation has two roots\n"
+                "First: %g\n"
+                "Second: %g\n",
+                root1, root2
+            );
             break;
+
         case INF_ROOTS:
             printf("The equation has an infinite number of solutions\n");
             break;
+
         default:
-            printf("INTERNAL ERROR: solve_quadratic returned a unexpected number of roots: %g\n", n_roots);
+            printf(
+                "INTERNAL ERROR: solve_quadratic returned"
+                " a unexpected number of roots: %g\n",
+                n_roots
+            );
             return EXIT_FAILURE;
     }
 }

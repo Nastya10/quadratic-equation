@@ -1,7 +1,7 @@
 /**
  * @file
- * @brief Functions for main
- * @date i do not know when this is gonna end :D
+ * @brief В этом файле находятся функции для main
+ * @date
  */
 
 #ifndef OVERALL_H_INCLUDED
@@ -10,28 +10,28 @@
 #include "solver.h"
 
 /**
- * Tests the program
+ * Тестирует программу
  */
 void test(void);
 
 /**
- * Input of three coefficients
+ * Вводит три коэффицента квадратного уравнения
  *
  * @param[in] a quadratic coefficient
  * @param[in] b linear coefficient
  * @param[in] c free member
  *
- * @param[out] Returns error code
+ * @param[out] Возвращает код ошибки
  */
 int input(float *a, float *b, float *c);
 
 /**
- * Displays the number of roots and their values
+ * Выводит количество корней и их значения
  *
  * @param[in] b linear coefficient
  * @param[in] c free member
  *
- * @param[out] Returns error code
+ * @param[out] Возвращает код ошибки
  */
 int print(
     enum roots_num n_roots,
