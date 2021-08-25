@@ -7,32 +7,30 @@
 #include "test.h"
 #include "solver.h"
 
+#define test_quadratic(                                                                       \
+    n_failed_tests_quadratic,                                                                 \
+    a, b, c, correct_n_roots,                                                                 \
+    root1_expected, root2_expected                                                            \
+    ) (                                                                                       \
+    n_failed_tests_quadratic += test_solve_quadratic_roots_quantity(a, b, c, correct_n_roots), \
+    n_failed_tests_quadratic += test_solve_quadratic_roots(a, b, c, root1_expected, root2_expected));
+
 int test_solve_quadratic(void)
 {
     int n_failed_tests_quadratic = 0;
 
-    n_failed_tests_quadratic += test_solve_quadratic_roots_quantity(0, 0, 0, INF_ROOTS);
-    n_failed_tests_quadratic += test_solve_quadratic_roots(0, 0, 0, 0, 0);
-
-    n_failed_tests_quadratic += test_solve_quadratic_roots_quantity(0, 0, 5, NO_ROOTS);
-    n_failed_tests_quadratic += test_solve_quadratic_roots(0, 0, 5, 0, 0);
-
-    n_failed_tests_quadratic += test_solve_quadratic_roots_quantity(2, 4, 3, NO_ROOTS);
-    n_failed_tests_quadratic += test_solve_quadratic_roots(2, 4, 3, 0, 0);
-
-    n_failed_tests_quadratic += test_solve_quadratic_roots_quantity(0, 3, 15, ONE_ROOT);
-    n_failed_tests_quadratic += test_solve_quadratic_roots(0, 3, 15, -5, -5);
-
-    n_failed_tests_quadratic += test_solve_quadratic_roots_quantity(1, -4, 4, ONE_ROOT);
-    n_failed_tests_quadratic += test_solve_quadratic_roots(1, -4, 4, 2, 2);
-
-    n_failed_tests_quadratic += test_solve_quadratic_roots_quantity(1, 2, -15, TWO_ROOTS);
-    n_failed_tests_quadratic += test_solve_quadratic_roots(1, 2, -15, 3, -5);
+    test_quadratic(n_failed_tests_quadratic, 0, 0, 0, INF_ROOTS, 0, 0);
+    test_quadratic(n_failed_tests_quadratic, 0, 0, 5, NO_ROOTS, 0, 0);
+    test_quadratic(n_failed_tests_quadratic, 0.001, -0.001, 0, TWO_ROOTS, 1, 0);
+    test_quadratic(n_failed_tests_quadratic, 2, 4, 3, NO_ROOTS, 0, 0);
+    test_quadratic(n_failed_tests_quadratic, 0, 3, 15, ONE_ROOT,  -5, -5);
+    test_quadratic(n_failed_tests_quadratic, 1, -4, 4, ONE_ROOT, 2, 2);
+    test_quadratic(n_failed_tests_quadratic, 1, 2, -15, TWO_ROOTS, 3, -5);
 
     return n_failed_tests_quadratic;
 }
 
-int test_solve_quadratic_roots_quantity(float a, float b, float c, enum roots_num correct_n_roots)
+int test_solve_quadratic_roots_quantity(const float a, const float b, const float c, enum roots_num correct_n_roots)
 {
     assert(isfinite(a));
     assert(isfinite(b));
@@ -53,7 +51,7 @@ int test_solve_quadratic_roots_quantity(float a, float b, float c, enum roots_nu
         return 0;
 }
 
-int test_solve_quadratic_roots(float a, float b, float c, float root1_expected, float root2_expected)
+int test_solve_quadratic_roots(const float a, const float b, const float c, float root1_expected, float root2_expected)
 {
     assert(isfinite(a));
     assert(isfinite(b));
@@ -93,7 +91,7 @@ int test_solve_linear(void)
     return n_failed_tests_linear;
 }
 
-int test_solve_linear_roots_quantity(float b, float c, enum roots_num correct_n_roots)
+int test_solve_linear_roots_quantity(const float b, const float c, enum roots_num correct_n_roots)
 {
     assert(isfinite(b));
     assert(isfinite(c));
@@ -113,7 +111,7 @@ int test_solve_linear_roots_quantity(float b, float c, enum roots_num correct_n_
         return 0;
 }
 
-int test_solve_linear_root(float b, float c, float root_expected)
+int test_solve_linear_root(const float b, const float c, float root_expected)
 {
     assert(isfinite(b));
     assert(isfinite(c));

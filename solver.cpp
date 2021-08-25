@@ -6,9 +6,9 @@
 #include "floats.h"
 #include "solver.h"
 
-static float discriminant(float a, float b, float c);
+static float calculate_discriminant(float a, float b, float c);
 
-enum roots_num solve_quadratic(float a, float b, float c, float *root1, float *root2)
+enum roots_num solve_quadratic(const float a, const float b, const float c, float *root1, float *root2)
 {
     assert(isfinite(a));
     assert(isfinite(b));
@@ -18,7 +18,7 @@ enum roots_num solve_quadratic(float a, float b, float c, float *root1, float *r
     assert(root2 != NULL);
     assert(root1 != root2);
 
-    if (floats_are_equal(a, 0))
+    if (compare_floats(a, 0) == EQUAL)
     {
         enum roots_num n_roots = solve_linear(b, c, root1);
         if (n_roots == 1)
@@ -27,10 +27,10 @@ enum roots_num solve_quadratic(float a, float b, float c, float *root1, float *r
     }
     else
     {
-        float d =  discriminant(a, b, c);
+        float d =  calculate_discriminant(a, b, c);
         float parab_vert = -b / (2 * a);
 
-        if (float_is_less(d, 0))
+        if (compare_floats(d, 0) == LESS)
         {
             return NO_ROOTS;
         }
@@ -75,7 +75,7 @@ enum roots_num solve_linear(float b, float c, float *root)
     }
 }
 
-static float discriminant(float a, float b, float c)
+static float calculate_discriminant(float a, float b, float c)
 {
     return b * b - 4 * a * c;
 }
