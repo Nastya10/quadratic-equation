@@ -27,4 +27,10 @@ int test_solve_linear_roots_quantity(
 );
 int test_solve_linear_root(const float b, const float c, float root_expected);
 
+void test_quadratic(
+    int *n_failed_tests_quadratic,
+    const float a, const float b, const float c,
+    enum roots_num correct_n_roots, float root1_expected, float root2_expected
+);
+
 #endif // TEST_H_INCLUDED
