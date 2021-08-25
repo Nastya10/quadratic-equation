@@ -6,7 +6,7 @@ Program works in testing mode if macro ```TEST``` is defined.
 
 ## Building
 [CodeBlocks project file](https://github.com/Nastya10/quadratic-equation/blob/main/solving_squares.cbp)
-Use CodeBlocks IDE with g++ compiler in order to build it.
+Use CodeBlocks IDE with g++ compiler in order to build it. All files with the cpp extension.
 
 ## Documentation
 Full documentation can be found [here](https://github.com/Nastya10/quadratic-equation/tree/main/docs).
