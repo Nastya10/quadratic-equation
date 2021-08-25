@@ -128,7 +128,8 @@ int test_solve_linear_root(const float b, const float c, float root_expected)
 void test_quadratic(
     int *n_failed_tests_quadratic,
     const float a, const float b, const float c,
-    enum roots_num correct_n_roots, float root1_expected, float root2_expected)
+    enum roots_num correct_n_roots, float root1_expected, float root2_expected
+)
 {
     *n_failed_tests_quadratic += test_solve_quadratic_roots_quantity(a, b, c, correct_n_roots);
     *n_failed_tests_quadratic += test_solve_quadratic_roots(a, b, c, root1_expected, root2_expected);
