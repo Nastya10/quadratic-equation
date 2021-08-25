@@ -18,7 +18,6 @@
 #include "overall.h"
 #include "test.h"
 #include "solver.h"
-                      //NAN math.h
 
 #define TEST
 
@@ -36,7 +35,7 @@ int main(void)
 
     input(&a, &b, &c);
 
-    if (__isnanf(root1) != 0 || __isnanf(root1) != 0)
+    if (__isnanf(root1) != 0 || __isnanf(root2) != 0)
         return EXIT_SUCCESS;
 
     enum roots_num  n_roots = solve_quadratic(a, b, c, &root1, &root2);
