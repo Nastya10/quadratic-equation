@@ -1,5 +1,5 @@
 # Solving Quadratic Equations
-This program takes as input three coefficients of the quadratic equation ax^2 + bx + c = 0 and then returns the number of roots and their values.
+This program takes as input three coefficients of the quadratic equation ```ax^2 + bx + c = 0``` and then returns the number of roots and their values.
 
 ## Testing
 Program works in testing mode if macro ```TEST``` is defined.
