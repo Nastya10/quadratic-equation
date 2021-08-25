@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Решение квадратных уравнений: Файл solver.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Решение квадратных уравнений
+   </div>
+   <div id="projectbrief">Решение квадратных уравнений</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл solver.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Функции в этом файле решают квадратные и линейные уравнения  
+<a href="#details">Подробнее...</a></p>
+
+<p><a href="solver_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a4bb452ab79aaa95e2cf7f2453824a09d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8h.html#a4bb452ab79aaa95e2cf7f2453824a09d">roots_num</a> { <a class="el" href="solver_8h.html#a4bb452ab79aaa95e2cf7f2453824a09da5a79e9e49077da58fe5d46a98f0b5e36">INF_ROOTS</a> = -1
+, <a class="el" href="solver_8h.html#a4bb452ab79aaa95e2cf7f2453824a09dab9a321da349ac1355b717745736ad90c">NO_ROOTS</a> = 0
+, <a class="el" href="solver_8h.html#a4bb452ab79aaa95e2cf7f2453824a09da6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a> = 1
+, <a class="el" href="solver_8h.html#a4bb452ab79aaa95e2cf7f2453824a09da876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a> = 2
+ }</td></tr>
+<tr class="separator:a4bb452ab79aaa95e2cf7f2453824a09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a772c3d707c150d66071a9e1957bce8da"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="solver_8h.html#a4bb452ab79aaa95e2cf7f2453824a09d">roots_num</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8h.html#a772c3d707c150d66071a9e1957bce8da">solve_quadratic</a> (const float a, const float b, const float c, float *root1, float *root2)</td></tr>
+<tr class="separator:a772c3d707c150d66071a9e1957bce8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d540794c8aaa8f3d5d7e53656dd965"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="solver_8h.html#a4bb452ab79aaa95e2cf7f2453824a09d">roots_num</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8h.html#a76d540794c8aaa8f3d5d7e53656dd965">solve_linear</a> (float b, float c, float *root)</td></tr>
+<tr class="separator:a76d540794c8aaa8f3d5d7e53656dd965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Функции в этом файле решают квадратные и линейные уравнения </p>
+<dl class="section date"><dt>Дата</dt><dd></dd></dl>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a4bb452ab79aaa95e2cf7f2453824a09d" name="a4bb452ab79aaa95e2cf7f2453824a09d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bb452ab79aaa95e2cf7f2453824a09d">&#9670;&nbsp;</a></span>roots_num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="solver_8h.html#a4bb452ab79aaa95e2cf7f2453824a09d">roots_num</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Здесь перечислены все возможные варианты количества корней </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a4bb452ab79aaa95e2cf7f2453824a09da5a79e9e49077da58fe5d46a98f0b5e36" name="a4bb452ab79aaa95e2cf7f2453824a09da5a79e9e49077da58fe5d46a98f0b5e36"></a>INF_ROOTS&#160;</td><td class="fielddoc"><p >Означает бесконечное количество корней </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bb452ab79aaa95e2cf7f2453824a09dab9a321da349ac1355b717745736ad90c" name="a4bb452ab79aaa95e2cf7f2453824a09dab9a321da349ac1355b717745736ad90c"></a>NO_ROOTS&#160;</td><td class="fielddoc"><p >Означает отсутствие корней </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bb452ab79aaa95e2cf7f2453824a09da6700c0f6efd23571cb22aefd2510b1cf" name="a4bb452ab79aaa95e2cf7f2453824a09da6700c0f6efd23571cb22aefd2510b1cf"></a>ONE_ROOT&#160;</td><td class="fielddoc"><p >Означает один корень </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bb452ab79aaa95e2cf7f2453824a09da876622d3c0b008da13a3685c64714e81" name="a4bb452ab79aaa95e2cf7f2453824a09da876622d3c0b008da13a3685c64714e81"></a>TWO_ROOTS&#160;</td><td class="fielddoc"><p >Означает два корня </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a76d540794c8aaa8f3d5d7e53656dd965" name="a76d540794c8aaa8f3d5d7e53656dd965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d540794c8aaa8f3d5d7e53656dd965">&#9670;&nbsp;</a></span>solve_linear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="solver_8h.html#a4bb452ab79aaa95e2cf7f2453824a09d">roots_num</a> solve_linear </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>root</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Решает линейное уравнение bx + c = 0</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>линейный коэффицент </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>свободный член</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">root</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество корней уравнения</dd></dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NO_ROOTS</td><td></td></tr>
+    <tr><td class="paramname">ONE_ROOT</td><td></td></tr>
+    <tr><td class="paramname">INF_ROOTS</td><td>возвращается в случае бесконечного количества корней </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a772c3d707c150d66071a9e1957bce8da" name="a772c3d707c150d66071a9e1957bce8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772c3d707c150d66071a9e1957bce8da">&#9670;&nbsp;</a></span>solve_quadratic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="solver_8h.html#a4bb452ab79aaa95e2cf7f2453824a09d">roots_num</a> solve_quadratic </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>root1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>root2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Решает квадратное уравнение ax^2 + bx + c = 0</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>квадратичный коэффицент </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>линейный коэффицент </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>свободный член</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">root1</td><td>является большем корнем уравнения </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">root2</td><td>является меньшим корнем уравнения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество корней уравнения</dd></dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NO_ROOTS</td><td></td></tr>
+    <tr><td class="paramname">ONE_ROOT</td><td></td></tr>
+    <tr><td class="paramname">TWO_ROOTS</td><td></td></tr>
+    <tr><td class="paramname">INF_ROOTS</td><td>возвращается в случае бесконечного количества корней </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>
