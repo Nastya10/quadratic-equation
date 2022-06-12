@@ -5,7 +5,7 @@
 
 #include "floats.h"
 
-//FLT_EPSILON примерно 2^(-23)
+//FLT_EPSILON ГЇГ°ГЁГ¬ГҐГ°Г­Г® 2^(-23)
 
 enum compare_floats_result compare_floats(const float float1, const float float2)
 {
